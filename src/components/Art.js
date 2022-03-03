@@ -1,4 +1,5 @@
 import React from "react";
+import { Navigate } from "react-router-dom";
 import "../styles/gallary.css";
 var listOfImages = [];
 
@@ -11,6 +12,7 @@ class Art extends React.Component {
       counter: 0,
       image: "",
       isHidden: false,
+      login: false,
     };
 
     this.handleClickForward = this.handleClickForward.bind(this);
@@ -148,53 +150,69 @@ class Art extends React.Component {
   render() {
     return (
       <div>
-        <div id="myBtnDiv">
-          <div id="mainBtn">
-            <button className="myBtn" onClick={(e) => this.handleClickList(e)}>
-              desmos_polarr
-            </button>
-            <button className="myBtn" onClick={(e) => this.handleClickList(e)}>
-              iphone_edits
-            </button>
-            <button className="myBtn" onClick={(e) => this.handleClickList(e)}>
-              nvidia_images
-            </button>
-          </div>
-          {this.state.isHidden === true && (
-            <div id="subBtn">
-              {" "}
-              <button
-                className="myBtn"
-                onClick={(e) => this.handleClickList(e)}
-              >
-                paintings
-              </button>
-              <button
-                className="myBtn"
-                onClick={(e) => this.handleClickList(e)}
-              >
-                unreal
-              </button>
-            </div>
-          )}
-        </div>
-        <div id="wrapContent">
-          <div>
-            <button onClick={this.handleClickBack}> {"<"} </button>
-          </div>
-          <div id="wrapImage">
-            <img
-              key={1}
-              src={this.state.image}
-              className="image"
-              alt="info"
-            ></img>
-          </div>
+        {this.state.login ? (
           <div>
             {" "}
-            <button onClick={this.handleClickForward}> {">"} </button>
+            <div id="myBtnDiv">
+              <div id="mainBtn">
+                <button
+                  className="myBtn"
+                  onClick={(e) => this.handleClickList(e)}
+                >
+                  desmos_polarr
+                </button>
+                <button
+                  className="myBtn"
+                  onClick={(e) => this.handleClickList(e)}
+                >
+                  iphone_edits
+                </button>
+                <button
+                  className="myBtn"
+                  onClick={(e) => this.handleClickList(e)}
+                >
+                  nvidia_images
+                </button>
+              </div>
+              {this.state.isHidden === true && (
+                <div id="subBtn">
+                  {" "}
+                  <button
+                    className="myBtn"
+                    onClick={(e) => this.handleClickList(e)}
+                  >
+                    paintings
+                  </button>
+                  <button
+                    className="myBtn"
+                    onClick={(e) => this.handleClickList(e)}
+                  >
+                    unreal
+                  </button>
+                </div>
+              )}
+            </div>
+            <div id="wrapContent">
+              <div>
+                <button onClick={this.handleClickBack}> {"<"} </button>
+              </div>
+              <div id="wrapImage">
+                <img
+                  key={1}
+                  src={this.state.image}
+                  className="image"
+                  alt="info"
+                ></img>
+              </div>
+              <div>
+                {" "}
+                <button onClick={this.handleClickForward}> {">"} </button>
+              </div>
+            </div>
           </div>
-        </div>
+        ) : (
+          <Navigate from="/art" to="/" />
+        )}
       </div>
     );
   }
