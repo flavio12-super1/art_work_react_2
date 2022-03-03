@@ -149,34 +149,34 @@ class Art extends React.Component {
     return (
       <div>
         <div id="myBtnDiv">
-          <button className="myBtn" onClick={(e) => this.handleClickList(e)}>
-            desmos_polarr
-          </button>
-          <button className="myBtn" onClick={(e) => this.handleClickList(e)}>
-            iphone_edits
-          </button>
-          <button className="myBtn" onClick={(e) => this.handleClickList(e)}>
-            nvidia_images
-          </button>
-          <div>
-            {this.state.isHidden === true && (
-              <div>
-                {" "}
-                <button
-                  className="myBtn"
-                  onClick={(e) => this.handleClickList(e)}
-                >
-                  paintings
-                </button>
-                <button
-                  className="myBtn"
-                  onClick={(e) => this.handleClickList(e)}
-                >
-                  unreal
-                </button>
-              </div>
-            )}
+          <div id="mainBtn">
+            <button className="myBtn" onClick={(e) => this.handleClickList(e)}>
+              desmos_polarr
+            </button>
+            <button className="myBtn" onClick={(e) => this.handleClickList(e)}>
+              iphone_edits
+            </button>
+            <button className="myBtn" onClick={(e) => this.handleClickList(e)}>
+              nvidia_images
+            </button>
           </div>
+          {this.state.isHidden === true && (
+            <div id="subBtn">
+              {" "}
+              <button
+                className="myBtn"
+                onClick={(e) => this.handleClickList(e)}
+              >
+                paintings
+              </button>
+              <button
+                className="myBtn"
+                onClick={(e) => this.handleClickList(e)}
+              >
+                unreal
+              </button>
+            </div>
+          )}
         </div>
         <div id="wrapContent">
           <div>

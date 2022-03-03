@@ -2,15 +2,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
+#mainBtn {
+  display: flex;
+}
+#subBtn {
+  display: flex;
+}
+
 .myBtn {
   margin: 10px 5px 5px 5px;
   border: solid;
   cursor: pointer;
 }
 .image {
+  width: 80vw;
   max-width: 500px;
-  max-height: 500px;
 }
 #wrapContent {
   display: flex;
@@ -19,8 +27,9 @@
   justify-content: center;
 }
 #wrapImage {
+  width: 80vw;
   min-height: 525px;
-  min-width: 525px;
+  max-width: 525px;
   display: flex;
   align-items: center;
   justify-content: center;

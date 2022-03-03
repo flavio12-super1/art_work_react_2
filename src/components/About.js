@@ -21,7 +21,7 @@ function About() {
           Lurker
         </a>
         <a href="https://socket-image-2.herokuapp.com/" target="_blank">
-          <img src={teaser} alt="my teaser image" style={{ width: "900px" }} />
+          <img src={teaser} alt="my teaser image" id="bannerImage" />
         </a>
       </div>
     </div>

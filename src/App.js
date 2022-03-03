@@ -17,6 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/art" element={<Art />} />
           <Route path="/about" element={<About />} />
+          {/* all around me are familiar faces */}
         </Routes>
       </div>
     </BrowserRouter>

@@ -9,7 +9,7 @@ function Home() {
         <h1>The Future of art is Digitial</h1>
         <h2>Click images to view artwork</h2>
         <center>
-          <div style={{ width: "400px" }}>
+          <div style={{ maxWidth: "400px" }}>
             All content was made by Flavio Herrera and only for the use of
             Flavio incorporated. Distribution of illegal copies of the files can
             send you to jail. See something, say something. And most importantly
@@ -17,7 +17,7 @@ function Home() {
           </div>
           <div
             style={{
-              width: "400px",
+              maxWidth: "400px",
               fontSize: "18px",
               color: "red",
               padding: "10px",
