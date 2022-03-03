@@ -1,0 +1,8 @@
+#contentWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+a:-webkit-any-link {
+  color: white;
+}

@@ -1,0 +1,30 @@
+#myBtnDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.myBtn {
+  margin: 10px 5px 5px 5px;
+  border: solid;
+  cursor: pointer;
+}
+.image {
+  max-width: 500px;
+  max-height: 500px;
+}
+#wrapContent {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+#wrapImage {
+  min-height: 525px;
+  min-width: 525px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 4px;
+  background-color: aliceblue;
+  margin: 5px 10px 5px 10px;
+}
